@@ -1,0 +1,45 @@
+1. Что такое парадигма ООП?
+Программа явлется набором объектов и взаимодействием этих объектов
+
+2. Что такое классы в Java?
+Описание стркутуры одного типа объекта(можно сравнить с чертежом).
+
+3. Что такое свойства класса?
+Объекты являются экземпярами класса. Классы имеют возможность наследовать атрибуты и методы их родительских классов
+4. Как создать экземпляр класса (объект)?
+
+MyClass newObj = new MyClass();
+
+5. Как создать свойства для определенного класса?
+
+public class MyClass {
+    int attribute1;
+    String attribute2;
+}
+6. Как задать свойства?
+
+public class MyClass {
+    int attribute1;
+    String attribute2;
+
+    public static void main (String[] args) {
+	MyClass newObj = new MyClass();
+	newObj.attribute1 = 25;
+	newObj.attribute2 = "World";
+    }
+}
+
+7. Как получить определенное свойства объекта?
+
+public class MyClass {
+    int attribute1;
+    String attribute2;
+
+    public static void main (String[] args) {
+	MyClass newObj = new MyClass();
+	newObj.attribute1 = 25;
+	newObj.attribute2 = "World";
+
+	System.out.println(newObj.attribute1)
+    }
+}
