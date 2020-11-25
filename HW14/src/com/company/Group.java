@@ -33,7 +33,7 @@ public class Group {
     public String getStudentArray() {
         String list = "";
         for (String s:studentArray) {
-            list += s + "";
+            list += s + " ";
         }
         return list;
     }
