@@ -6,6 +6,10 @@ public class Course {
     int id;
     private String mentor;
 
+    public Course () {
+
+    }
+
     public Course (String name, String date, int id, String mentor) {
         this.name = name;
         this.date = date;
@@ -16,15 +20,12 @@ public class Course {
     public void setName(String name) {
         this.name = name;
     }
-
     public void setDate(String date) {
         this.date = date;
     }
-
     public void setId(int id) {
         this.id = id;
     }
-
     public void setMentor(String mentor) {
         this.mentor = mentor;
     }
@@ -33,15 +34,12 @@ public class Course {
     public String getName() {
         return name;
     }
-
     public String getDate() {
         return date;
     }
-
     public int getId() {
         return id;
     }
-
     public String getMentor() {
         return mentor;
     }
