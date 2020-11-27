@@ -8,23 +8,29 @@ public class Human {
     private String hobby;
     private String gender;
 
-    public Human (String fName, String lName, String mName, int birthYear, String gender) {
+    public Human (String fName, String lName, String mName, int age, String gender) {
         this.fName = fName;
         this.lName = lName;
         this.mName = mName;
-        this.birthYear = birthYear;
+        this.birthYear = 2020 - age;
         this.gender = gender;
     }
 
-    public Human (String fName, String lName, String mName, int birthYear, String hobby, String gender) {
+    public Human (String fName, String lName, String mName, int age, String hobby, String gender) {
         this.fName = fName;
         this.lName = lName;
         this.mName = mName;
-        this.birthYear = birthYear;
+        this.birthYear = 2020 - age;
         this.hobby = hobby;
         this.gender = gender;
     }
 
+    public void about() {
+        if (hobby == null) {
+            hobby =  "to do nothing";
+        }
+        System.out.printf("%nName is %s %s %s. Born in %s. %s. Likes %s", this.lName, this.fName, this.mName, this.birthYear, this.gender, this.hobby);
+    }
 
     public void setfName(String fName) {
         this.fName = fName;
@@ -39,8 +45,7 @@ public class Human {
     }
 
     public void setBirthYear(int age) {
-        birthYear = 2020 - age;
-        this.birthYear = birthYear;
+        this.birthYear = 2020 - age;
     }
 
     public void setHobby(String hobby) {
