@@ -4,13 +4,13 @@ public class Course {
     private String name;
     private String date;
     int id;
-    private String mentor;
+    Mentor mentor;
 
     public Course () {
 
     }
 
-    public Course (String name, String date, int id, String mentor) {
+    public Course (String name, String date, int id, Mentor mentor) {
         this.name = name;
         this.date = date;
         this.id = id;
@@ -26,7 +26,7 @@ public class Course {
     public void setId(int id) {
         this.id = id;
     }
-    public void setMentor(String mentor) {
+    public void setMentor(Mentor mentor) {
         this.mentor = mentor;
     }
 
@@ -41,7 +41,7 @@ public class Course {
         return id;
     }
     public String getMentor() {
-        return mentor;
+        return mentor.getName();
     }
 
     @Override
