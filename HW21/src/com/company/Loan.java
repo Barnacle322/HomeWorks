@@ -5,7 +5,7 @@ public class Loan {
     private int amount;
     private String duration;
     private int interestRate;
-    private static int loanQuantity;
+    static int loanQuantity;
     private static int sum;
     private static double avg;
 
