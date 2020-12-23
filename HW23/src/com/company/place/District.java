@@ -1,5 +1,5 @@
 
-package com.company;
+package com.company.place;
 
 public class District extends Locality{
 

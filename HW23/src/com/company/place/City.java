@@ -1,4 +1,4 @@
-package com.company;
+package com.company.place;
 
 public class City extends Locality{
     static City[] array = new City[6];

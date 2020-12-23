@@ -1,5 +1,10 @@
 package com.company;
 
+import com.company.place.City;
+import com.company.place.District;
+import com.company.place.Locality;
+import com.company.place.Village;
+
 public class Main {
     public static void main(String[] args) {
         City bishkek = new City("Бишкек", "Тулобаев Балбак Зарлыкович");

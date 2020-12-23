@@ -1,4 +1,4 @@
-package com.company;
+package com.company.place;
 
 public abstract  class Locality {
     private String name;
