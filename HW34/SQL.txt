@@ -1,0 +1,50 @@
+create table visitors(
+	visitor_id SERIAL primary key,
+	visitor_full_name VARCHAR not null,
+	visitor_birth_year VARCHAR,
+	visitor_gender VARCHAR
+)
+
+create table sport_types(
+	sport_type_id INTEGER primary key,
+	sport_type_name VARCHAR(50) unique not null,
+	salary INTEGER
+)
+
+create table trainers(
+	trainer_id SERIAL primary key,
+	trainer_full_name VARCHAR(50) not null,
+	sport_type_id INTEGER references sport_types(sport_type_id),
+	phone_number VARCHAR,
+	inn VARCHAR unique not null
+)
+
+
+create table attendance(
+	attendance_id SERIAL primary key,
+	visitor INTEGER references visitors(visitor_id),
+	time_visited timestamp,
+	trainer INTEGER references trainers(trainer_id)
+)
+
+insert into sport_types (sport_type_id, sport_type_name, salary)
+values (1, 'Volleyball', 190)
+	(2, 'Basketball', 250), 
+	(3, 'Swimming', 300),
+	(4, 'Football', 400)
+
+insert into trainers (trainer_full_name, sport_type_id, phone_number, inn)
+values ('Eliza Chukorova', 3, '0700154874', '267367261'), 
+	('Arstan Usenov', 1, '05547263842', '738463792'),
+	('Artur Aspekov', 4, '06007635232', '283748263')
+
+insert into visitors (visitor_full_name, visitor_birth_year, visitor_gender)
+values ('Kanykei Almazbekova', '2002', 'Female'),
+	('Chyngyz Ahmedov', '1980', 'Male'),
+	('Adelya Maratova', '2000', 'Female')
+
+insert into attendance (visitor, time_visited, trainer) 
+values (1, '2021-1-15 10:20:45', 3),
+	(2, '2021-2-1 22:10:56', 1),
+	(1, '2021-1-5 9:17:36', 3),
+	(3, '2020-12-31 23:59:59', 2)
